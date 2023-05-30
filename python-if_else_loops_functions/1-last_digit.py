@@ -5,7 +5,6 @@ if number < 0:
     last = number % -10
 else:
     last = number % 10
-print(last)
 if last > 5:
     str = "and is greater than 5"
 elif last < 6 and last != 0:
