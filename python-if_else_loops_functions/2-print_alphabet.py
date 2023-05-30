@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-print("abcdefghijklmnopqrstuvwxyz", end='')
+for x in range(97, 123):
+    print("{:c}".format(x),  end='')
