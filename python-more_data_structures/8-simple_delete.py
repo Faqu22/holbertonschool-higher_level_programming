@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 def simple_delete(a_dictionary, key=""):
-    if key == "" or a_dictionary == []:
+    if a_dictionary == []:
         return
-    try:
+    if key in a_dictionary:
         a_dictionary.pop(key)
-    except a_dictionary[key].DoesNotExist:
-        pass
     return a_dictionary
