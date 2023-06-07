@@ -35,5 +35,7 @@ def roman_to_int(roman_string):
         x = let
 
     for x in result:
+        if x == 0:
+            return 0
         y += x
     return y
