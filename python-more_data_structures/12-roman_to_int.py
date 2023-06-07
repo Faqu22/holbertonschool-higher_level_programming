@@ -22,7 +22,7 @@ def roman_to_int(roman_string):
     if roman_string:
         result = list(map(whatRoman, roman_string))
     else:
-        return None
+        return 0
     x, y = '', 0
     letterI = {'I': 0, 'V': -2, 'X': -2, 'L': -2, 'C': -2, 'D': -2, 'M': -2}
     letterX = {'I': 0, 'V': 0, 'X': 0, 'L': -20, 'C': -20, 'D': -20, 'M': -20}
