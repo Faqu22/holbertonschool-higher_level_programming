@@ -19,7 +19,7 @@ def whatRoman(i):
 
 
 def roman_to_int(roman_string):
-    if roman_string:
+    if roman_string and isinstance(roman_string, str):
         result = list(map(whatRoman, roman_string))
     else:
         return 0
