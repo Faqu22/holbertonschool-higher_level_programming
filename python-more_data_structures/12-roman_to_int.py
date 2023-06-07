@@ -23,7 +23,7 @@ def roman_to_int(roman_string):
     x, y = '', 0
     letterI = {'I': 0, 'V': -2, 'X': -2, 'L': -2, 'C': -2, 'D': -2, 'M': -2}
     letterX = {'I': 0, 'V': 0, 'X': 0, 'L': -20, 'C': -20, 'D': -20, 'M': -20}
-    letterC = {'I': 0, 'V': 0, 'X': 0, 'L': 0, 'C': 0, 'M': -200}
+    letterC = {'I': 0, 'V': 0, 'X': 0, 'L': 0, 'C': 0, 'D': -200, 'M': -200}
 
     for let in roman_string:
         if x == 'I':
