@@ -51,10 +51,12 @@ class Square:
 
     def my_print(self):
         """Init with size of square"""
-        for x in range(0, self.position[1]):
-            print()
         if self.size == 0:
             print()
+            return
+        if self._position[1] > 0:
+            for x in range(0, self.position[1]):
+                print()
         for x in range(0, self.size):
             for y in range(0, self.position[0]):
                 print(" ", end="")
