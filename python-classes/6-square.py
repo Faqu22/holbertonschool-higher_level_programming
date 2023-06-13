@@ -14,10 +14,12 @@ class Square:
 
     @property
     def size(self):
+        """Init with size of square"""
         return self._size
 
     @property
     def position(self):
+        """Init with size of square"""
         return self._position
 
     @size.setter
@@ -39,10 +41,12 @@ class Square:
             self._position = value
 
     def area(self):
+        """Init with size of square"""
         area = self.size * self.size
         return area
 
     def my_print(self):
+        """Init with size of square"""
         for x in range(0, self.position[1]):
             print()
         if self.size == 0:
