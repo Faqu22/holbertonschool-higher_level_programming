@@ -34,4 +34,3 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         else:
             self.__width = value
-
