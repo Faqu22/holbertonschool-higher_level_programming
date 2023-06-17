@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 import unittest
 max_integer = __import__('6-max_integer').max_integer
-"""Unittest for max_integer([])"""
 
 class TestMaxNumber(unittest.TestCase):
-    """ Test cases bases for max_integer function """
     def test_order_ascending(self):
         result = max_integer([1, 2, 3, 4])
         self.assertEqual(result, 4)
