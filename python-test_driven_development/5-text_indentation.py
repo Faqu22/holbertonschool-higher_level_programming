@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def text_indentation(text):
+    if text == "":
+        return
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
@@ -8,7 +10,7 @@ def text_indentation(text):
         if i != ' ' and (x != '.' and x != '?' and x != ':'):
             print(x, end="")
         elif i == ' ':
-            print(x)
+            print(x, end="")
         else:
             print("{}\n".format(x))
         x = i
