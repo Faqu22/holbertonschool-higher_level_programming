@@ -16,6 +16,10 @@ TypeError: text must be a string
 hola.
 <BLANKLINE>
 
-
 >>> text_indentation("hola.")
 hola.
+
+>>> text_indentation("Holberton.school")
+Holberton
+<BLANKLINE>
+school

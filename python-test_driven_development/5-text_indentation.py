@@ -5,8 +5,11 @@ def text_indentation(text):
 
     x = ''
     for i in text:
-        if x != '.' and x != '?' and x != ':':
-            print(i, end="")
+        if i != ' ' and (x != '.' and x != '?' and x != ':'):
+            print(x, end="")
+        elif i == ' ':
+            print(x)
         else:
             print("\n")
         x = i
+    print(i, end="")
