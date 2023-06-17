@@ -10,6 +10,6 @@ def text_indentation(text):
         elif i == ' ':
             print(x)
         else:
-            print("\n")
+            print("{}\n".format(x))
         x = i
     print(i, end="")

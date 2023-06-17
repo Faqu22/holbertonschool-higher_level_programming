@@ -20,6 +20,7 @@ hola.
 hola.
 
 >>> text_indentation("Holberton.school")
-Holberton
+Holberton.
 <BLANKLINE>
 school
+
