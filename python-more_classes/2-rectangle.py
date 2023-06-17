@@ -37,7 +37,7 @@ class Rectangle:
 
     def area(self):
         return self.__height * self.__width
-    
+
     def perimeter(self):
         if self.__height != 0 and self.__width != 0:
             return (self.__width * 2) + (self.__height * 2)
@@ -57,17 +57,3 @@ class Rectangle:
             words = words + ('#' * self.__width)
             words = words + ('\n' if i + 1 < self.__height else '')
         return words
-
-
-my_rectangle = Rectangle(2, 4)
-print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
-
-print(str(my_rectangle))
-print(repr(my_rectangle))
-
-print("--")
-
-my_rectangle.width = 10
-my_rectangle.height = 3
-print(my_rectangle)
-print(repr(my_rectangle))
