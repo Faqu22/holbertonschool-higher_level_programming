@@ -48,6 +48,7 @@ class Rectangle:
         else:
             return 0
 
+    @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
@@ -71,15 +72,6 @@ class Rectangle:
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
 
-    """
-        @classmethod:
-        Is a decorator in Python used to define a method that belongs to
-        the class rather than an instance of the class. It receives the class
-        itself as the first argument, commonly referred to as cls, instead of
-        the instance (self). Class methods are useful when you need to perform
-        operations or access class-level attributes without requiring an
-        instance.
-    """
     @classmethod
     def square(cls, size=0):
         return Rectangle(size, size)
