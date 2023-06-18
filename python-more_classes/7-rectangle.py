@@ -12,7 +12,6 @@ class Rectangle:
         self.height = height
         self.width = width
         Rectangle.number_of_instances += 1
-        self.print_symbol = "#"
 
     @property
     def height(self):
@@ -52,7 +51,7 @@ class Rectangle:
     def __str__(self):
         if self.__width == 0 or self.height == 0:
             return ''
-        
+
         for i in range(self.__height - 1):
             print(str(self.print_symbol) * self.__width)
         print(str(self.print_symbol) * self.__width, end="")
@@ -64,27 +63,3 @@ class Rectangle:
     def __del__(self):
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
-
-my_rectangle_1 = Rectangle(2, 2)
-print(my_rectangle_1)
-print("--")
-my_rectangle_1.print_symbol = "&"
-print(my_rectangle_1)
-print("--")
-
-my_rectangle_2 = Rectangle(2, 1)
-print(my_rectangle_2)
-print("--")
-Rectangle.print_symbol = "C"
-print(my_rectangle_2)
-print("--")
-
-my_rectangle_3 = Rectangle(7, 3)
-print(my_rectangle_3)
-
-print("--")
-
-my_rectangle_3.print_symbol = ["C", "is", "fun!"]
-print(my_rectangle_3)
-
-print("--")
