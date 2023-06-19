@@ -49,13 +49,14 @@ class Rectangle:
             return 0
 
     def __str__(self):
-        if self.__width == 0 or self.height == 0:
-            return ''
-
-        for i in range(self.__height - 1):
-            print(str(self.print_symbol) * self.__width)
-        print(str(self.print_symbol) * self.__width, end="")
-        return ''
+        """Returns the rectangle in string format"""
+        result = ""
+        if self.width != 0 and self.height != 0:
+            for i in range(self.height):
+                result += str(self.print_symbol) * self.width
+                if i != self.height - 1:
+                    result += "\n"
+        return result
 
     def __repr__(self):
         return "Rectangle({}, {})".format(self.width, self.height)
