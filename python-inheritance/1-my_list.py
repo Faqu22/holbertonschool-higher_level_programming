@@ -10,8 +10,4 @@ class MyList(list):
 
     def print_sorted(self):
         """print the list in the ascending sort"""
-        i = sorted(self)
-        for x in range(len(i)):
-            print("{}{:d}{}".format("[" if x == 0 else " ", i[x],
-                                    "," if x < len(i) - 1 else "]"), end="")
-        print()
+        print(sorted(self))
