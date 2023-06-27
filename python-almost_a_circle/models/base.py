@@ -3,7 +3,7 @@
 
 
 import json
-from os import path
+import os
 
 
 class Base:
@@ -70,7 +70,7 @@ class Base:
         """
         Returns a list of instances from a JSON file
         """
-        if path.exists(cls.__name__ + ".json"):
+        if os.path.exists(cls.__name__ + ".json"):
             with open(cls.__name__ + ".json", "r", encoding="utf-8") as x:
                 data = x.read()
                 if data:
