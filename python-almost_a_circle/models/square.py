@@ -24,3 +24,29 @@ class Square(Rectangle):
         This function is called when you want to print the class
         """
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
+
+    def update(self, *args, **kwargs):
+        """
+        This method is used by update dates of the class
+        """
+        if args:
+            if len(args) > 3:
+                self.y = args[3]
+            if len(args) > 2:
+                self.x = args[2]
+            if len(args) > 1:
+                self.width = args[1]
+                self.height = args[1]
+            if len(args) > 0:
+                self.id = args[0]
+        else:
+            for i in kwargs:
+                if i == 'size':
+                    self.height = kwargs[i]
+                    self.width = kwargs[i]
+                elif i == 'x':
+                    self.x = kwargs[i]
+                elif i == 'y':
+                    self.y = kwargs[i]
+                elif i == 'id':
+                    self.id = kwargs[i]
