@@ -71,13 +71,20 @@ class Rectangle(Base):
         """
             prints a representation of the rectangle
         """
-        result = ""
         if self.__width != 0 and self.__height != 0:
-            for i in range(self.__height):
-                result += str('#') * self.__width
-                if i != self.__height - 1:
+            result = ""
+            if self.__y > 0:
+                for x in range(0, self.__y):
                     result += "\n"
-        print(result)
+            for x in range(0, self.__height):
+                for y in range(0, self.__x):
+                    result += " "
+                result += "#" * self.__width
+                if x != self.__height - 1:
+                    result += "\n"
+            print(result)
+        else:
+            print()
 
     def __str__(self):
         """
