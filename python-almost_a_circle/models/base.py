@@ -74,7 +74,7 @@ class Base:
             with open(cls.__name__ + ".json", "r", encoding="utf-8") as x:
                 data = x.read()
                 if data:
-                    list = json.loads(data)
+                    list = cls.from_json_string(data)
                     return [cls.create(**jstring)
                             for jstring in list]
                 else:
