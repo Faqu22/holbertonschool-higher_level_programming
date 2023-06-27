@@ -55,6 +55,9 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
+        """
+        Create a new object
+        """
         if cls.__name__ == "Rectangle":
             new = cls(1, 1)
         else:
