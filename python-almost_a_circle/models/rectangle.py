@@ -120,3 +120,6 @@ class Rectangle(Base):
                     self.__y = kwargs[i]
                 elif i == 'id':
                     self.id = kwargs[i]
+
+    def to_dictionary(self):
+        return {'id': self.id, 'width': self.__width, 'height': self.__height, 'x': self.__x, 'y': self.__y}
