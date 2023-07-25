@@ -2,6 +2,6 @@
 UPDATE
 second_table
 SET
-id = 10
+score = 10
 WHERE 
 name = 'Bob';
