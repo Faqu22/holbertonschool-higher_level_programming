@@ -18,9 +18,10 @@ if __name__ == "__main__":
     count = 1
     if rows is ():
         print()
-    for row in rows:
-        print("{}{}".format(row[0],
-                            (', ' if count < numlist else '\n')), end="")
-        count = count + 1
+    else:
+        for row in rows:
+            print("{}{}".format(row[0],
+                                (', ' if count < numlist else '\n')), end="")
+            count = count + 1
     cur.close()
     db.close()
