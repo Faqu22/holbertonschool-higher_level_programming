@@ -12,10 +12,12 @@ if __name__ == "__main__":
     cur = db.cursor()
     cur.execute("SELECT cities.name FROM cities INNER JOIN states \
                  ON cities.state_id = states.id WHERE \
-                BINARY states.name = %(name)s", {'name': sys.argv[4]})
+                states.name = %(name)s", {'name': sys.argv[4]})
     rows = cur.fetchall()
     numlist = len(rows)
     count = 1
+    if rows is ():
+        print()
     for row in rows:
         print("{}{}".format(row[0],
                             (', ' if count < numlist else '\n')), end="")
