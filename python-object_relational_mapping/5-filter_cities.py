@@ -16,12 +16,8 @@ if __name__ == "__main__":
     rows = cur.fetchall()
     numlist = len(rows)
     count = 1
-    if rows is ():
-        print()
-    else:
-        for row in rows:
-            print("{}{}".format(row[0],
-                                (', ' if count < numlist else '\n')), end="")
-            count = count + 1
-    cur.close()
-    db.close()
+    for row in rows:
+        print("{}{}".format(row[0],
+                            (', ' if count < numlist else '')), end="")
+        count = count + 1
+    print()
