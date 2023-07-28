@@ -14,8 +14,8 @@ if __name__ == "__main__":
         sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
     Base.metadata.create_all(engine)
     session = Session(engine)
-    row = session.query(State).filter((State.name == sys.argv[4]))
+    row = session.query(State).filter((State.name == sys.argv[4])).first()
     if row is None:
         print("Not found")
     else:
-        print(row[0].id)
+        print(row.id)
