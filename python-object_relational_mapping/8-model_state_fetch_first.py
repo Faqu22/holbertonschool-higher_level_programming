@@ -12,7 +12,9 @@ import sys
 if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
         sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
+    Base.metadata.create_all(engine)
     session = Session(engine)
-    stmt = select(State).where(State.id.in_([1]))
-    for state in session.scalars(stmt):
-        print(f"{state.id}: {state.name}")
+    row = session.query(State).first()
+    if row is None:
+        print("Nothing")
+    print(f"{row.id}: {row.name}")
